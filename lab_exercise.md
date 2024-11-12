@@ -40,4 +40,18 @@ Continue with the `Project_two` project from Lab 1.
 
 3. **Add template tags**
    - The `help` view template should include a tag that returns “Help Page”.
+
+---
+
+# Lab 3
+
+Recreate the project we developed earlier, but with some modifications.
+
+### Task:
+
+1. **Create a Simple Profile Page**
+   - The profile page should display a user’s profile photo and include a bio section beneath the photo.
+
+2. **Use Bootstrap for Styling**
+   - Use Bootstrap as the CSS framework for styling the profile page.
 ```
