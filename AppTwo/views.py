@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from AppTwo.models import BlogPost
 
 # Create your views here.
 from django.http import HttpResponse
+
 
 def index(request):
     my_dict = {'django_reinhardt': "This is Django on first_app/index.html!"}
@@ -12,3 +14,11 @@ def profile(request):
 
 def help(request):
     return render(request, 'help.html')
+
+def blog(request):
+    blog_posts = BlogPost.objects.all()
+    return render(request, 'first_app/blog.html', {'blog_posts': blog_posts})
+
+def blog_detail(request, post_id):
+    blog_post = get_object_or_404(BlogPost, id=post_id)
+    return render(request, 'first_app/blog_detail.html', {'blog_post': blog_post})
