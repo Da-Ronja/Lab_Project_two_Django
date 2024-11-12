@@ -1,0 +1,16 @@
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Django himself page</title>
+    </head>
+    <body>
+        <h1>Welcome this is a picture of Django himself</h1>
+        <img src="{% static "images/django_reinhardt.jpg" %}" alt="Oh no! It didnt work!" style="max-width: 200px;">
+        <p>    
+            {{ django_reinhardt }}
+        </p>
+        <a href="{% url 'profile' %}" class="btn btn-primary mt-4">Go to Profile Page</a>
+    </body>
+</html>
