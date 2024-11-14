@@ -1,4 +1,3 @@
-```markdown
 # Lab 1
 
 1. **Create your virtual environment**  
@@ -70,4 +69,3 @@ Recreate the project we worked on together in class.
 
 3. **Integrate with Frontend**
    - Display the populated data on the website by connecting it to appropriate views and templates.
-```
