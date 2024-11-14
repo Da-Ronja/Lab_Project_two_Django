@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from AppTwo.models import BlogPost
+from AppTwo.models import AccessRecord, BlogPost
 
 # Create your views here.
 from django.http import HttpResponse
@@ -22,3 +22,8 @@ def blog(request):
 def blog_detail(request, post_id):
     blog_post = get_object_or_404(BlogPost, id=post_id)
     return render(request, 'first_app/blog_detail.html', {'blog_post': blog_post})
+
+def web_table(request):
+    webpages_list = AccessRecord.objects.order_by('date')
+    date_dict = {'access_records': webpages_list}
+    return render(request, 'first_app/web_table.html', context=date_dict)

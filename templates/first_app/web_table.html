@@ -1,0 +1,39 @@
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Django himself page</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <h2 class="text-center mt-4">
+                Here are youre access records
+            </h2>
+        </div>
+
+        <div class="container">
+            {% if access_records %}
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Site Name</th>
+                        <th>Access Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for access_record in access_records %}
+                        <tr>
+                            <td>{{ access_record.name }}</td>
+                            <td>{{ access_record.date }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+                <p>No access records available</p>
+            {% endif %}
+        </div>
+    </body>
+</html>

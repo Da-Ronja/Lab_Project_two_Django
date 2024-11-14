@@ -54,4 +54,20 @@ Recreate the project we developed earlier, but with some modifications.
 
 2. **Use Bootstrap for Styling**
    - Use Bootstrap as the CSS framework for styling the profile page.
+
+---
+
+# Lab 4 
+Recreate the project we worked on together in class.
+
+### Task:
+1. **Create and Register Models in Database**
+   - Define and add models (Topic, Webpage, AccessRecord) to the project.
+   - Register the models in the admin interface to enable management through Django's admin panel.
+
+2. **Create a Data Populating Script**
+   - Create a script to populate the database with dummy data using the Faker library.
+
+3. **Integrate with Frontend**
+   - Display the populated data on the website by connecting it to appropriate views and templates.
 ```
